@@ -29,11 +29,10 @@ dependencies {
 }
 
 javafx {
-	sdk = '/Users/riedhammerko/Library/Java/JavaVirtualMachines/javafx-sdk-17'
-	version = 17
+	sdk = "C:\\Program Files\\Java\\javafx-sdk-16"
+	version = "16"
 	modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
-
 test {
 	useJUnitPlatform()
 	testLogging {
