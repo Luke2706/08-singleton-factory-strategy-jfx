@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class OpenMensaAPIService {
 
-	private static final OpenMensaAPIService instance = new OpenMensaAPIService();
+	private static OpenMensaAPIService instance;
 	private final OpenMensaAPI mensaApiInstance;
 
 	private OpenMensaAPIService(){
@@ -19,7 +19,10 @@ public class OpenMensaAPIService {
 
 	}
 
-	public OpenMensaAPIService getInstance(){
+	public static OpenMensaAPIService getInstance(){
+		if(instance == null){
+			return new OpenMensaAPIService();
+		}
 		return instance;
 	}
 
